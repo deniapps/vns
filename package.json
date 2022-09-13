@@ -1,0 +1,20 @@
+{
+  "name": "vns",
+  "version": "1.0.0",
+  "description": "VuePress Next Starter",
+  "main": "index.js",
+  "repository": "https://github.com/deniapps/vns",
+  "author": "Adam C.",
+  "license": "MIT",
+  "private": false,
+  "devDependencies": {
+    "@vuepress/plugin-google-analytics": "next",
+    "@vuepress/plugin-search": "next",
+    "vuepress": "next",
+    "vuepress-plugin-sitemap2": "next"
+  },
+  "scripts": {
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs"
+  }
+}
