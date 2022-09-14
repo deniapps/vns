@@ -10,7 +10,7 @@ xfeatures:
     link: /how-tos/
   - title: 演示站
     details: 想看看效果如何？到GitHub Page瞧瞧！
-    link: /diary/
+    link: /demo/
   - title: Powered by VNS
     details: 有哪些网站在使用VuePress Next 懒人包?
     link: /powered-by-vns/

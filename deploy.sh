@@ -10,5 +10,13 @@ npm run build
 # 进入生成的文件夹
 cd docs/.vuepress/dist
 
-# 上传的服务器
-scp -r * adam@lamp.dnx:/var/www/61dh/.
+#创建.nojekyll 防止Github Pages build错误
+touch .nojekyll
+
+git init
+git add -A
+git commit -m 'deploy'
+
+git push -f "https://${access_token}@github.com:deniapps/vns.git" master:gh-pages
+
+cd -

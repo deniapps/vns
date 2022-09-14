@@ -1,12 +1,25 @@
 <?php
+/**
+ * genIndex.php用于生成文件夹下的索引文件，README.md (or. index.md)
+ * 需要PHP cli
+ * 运行cmd: php getIndex.php
+ *
+ * 也可以整合到deploy.sh
+ *
+ */
 
-genIndex("maggie");
-genIndex("nytimes");
+// 定义文件夹，必须在docs路径下
 
-function genIndex($folder)
+$mainFolder = "demo";
+$subFolder = "inner-demo";
+$description = "DEMO"; // 用于描述标题
+
+genIndex($mainFolder, $subFolder, $description);
+
+function genIndex($mainFolder, $folder, $description)
 {
-    $path = "docs/english/" . $folder . "/";
-    $mainIndex = "docs/english/README.md";
+    $path = "docs/" . $mainFolder . "/" . $folder . "/";
+    $mainIndex = "docs/" . $mainFolder . "/README.md";
 
     $match = $path . "*.md";
 
@@ -19,12 +32,11 @@ function genIndex($folder)
 
             $articles[] = [
                 "path" => $filename,
-                "url" => "/english/" . $folder . "/" . $name,
+                "url" => "/" . $mainFolder . "/" . $folder . "/" . $name,
                 "mTime" => $mTime,
             ];
 
         }
-        // echo "$filename size " . filesize($filename) . " " . filemtime($filename) . "\n";
     }
 
     usort($articles, function ($i1, $i2) {
@@ -41,16 +53,7 @@ function genIndex($folder)
         $articles[$i]['title'] = $title;
     }
 
-    $description = "";
-
-    // print_r($articles);
-    if ($folder === "maggie") {
-        $description = "跟Maggie学英语";
-    } elseif ($folder === "nytimes") {
-        $description = "纽时简报阅读笔记";
-    }
-
-    $content = genMarkDown($articles, $description);
+    $content = genMarkDown($articles, $description, $mainFolder);
 
     file_put_contents($path . "/README.md", $content);
 
@@ -73,27 +76,22 @@ function genIndex($folder)
 
 }
 
-// $it = new RecursiveTreeIterator(new RecursiveDirectoryIterator($mainPath, RecursiveDirectoryIterator::SKIP_DOTS));
-
-// foreach ($it as $path) {
-//     echo $path . "<br>";
-// }
-
-function genMarkDown($articles, $description)
+function genMarkDown($articles, $description, $mainFolder)
 {
     $content = "---\n";
-    $content .= "sidebar: false\n";
+    // $content .= "sidebar: false\n";
     $content .= "title: " . $description . " - 文章列表\n";
     $content .= "description: " . $description . " - 文章列表\n";
     $content .= "---\n\n";
 
     $content .= "# " . $description . " - 文章列表\n";
     $content .= "\n";
-    $content .= '<p><a href="/english">Back &#8617;</a></p>';
-    $content .= "\n\n";
+    // $content .= '<p><a href="/' . $mainFolder . '">Back &#8617;</a></p>';
+    // $content .= "\n\n";
 
     foreach ($articles as $article) {
         $content .= "- [" . $article['title'] . "](" . $article['url'] . ")\n";
+        // 如何需要显示文件最后编辑时间，可以参考下面的代码
         // $content .= "- [" . $article['title'] . "](" . $article['url'] . ") <span>- Last Updated: " . date('m/d/Y H:i:s', $article['mTime']) . "</span>\n";
     }
 

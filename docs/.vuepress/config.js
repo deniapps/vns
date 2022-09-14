@@ -30,7 +30,7 @@ export default defineUserConfig({
       },
       {
         text: "How-Tos",
-        link: "/how-to/",
+        link: "/how-tos/",
       },
       {
         text: "Demo",

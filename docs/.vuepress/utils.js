@@ -14,18 +14,14 @@ const inferSiderbars = () => {
     const parent = `/${dirname}/`;
     const children = fs
       .readdirSync(dirpath)
-      .filter(
-        (item) => item.endsWith(".md")
-        // item.endsWith(".md") && fs.statSync(path.join(dirpath, item)).isFile()
-      )
+      .filter((item) => item.endsWith(".md"))
       .sort((prev, next) => (next.includes("README.md") ? 1 : 0));
-    // .map((item) => item.replace(/(README)?(.md)$/, ""));
 
     sidebar[parent] = [
       {
         text: title,
         children,
-        collapsible: true,
+        collapsible: false,
       },
     ];
   });
