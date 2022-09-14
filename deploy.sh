@@ -1,6 +1,8 @@
 #!/bin/sh
 
-php genIndex.php
+# 自动生成文件夹下的索引页
+# php genIndex.php
+
 # 确保脚本抛出遇到的错误
 set -e
 
