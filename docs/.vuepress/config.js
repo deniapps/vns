@@ -10,8 +10,6 @@ export default defineUserConfig({
   title: "VuePress Next Starter",
   description: "VuePress Next 懒人包 - VNS",
   base: "/vns/", // if deployed to the root, then use "/"
-  repo: "deniapps/vns",
-  editLinks: true,
   head: [
     [
       "link",
@@ -25,6 +23,8 @@ export default defineUserConfig({
     // default theme config
     logo: "/logo.png",
     sidebar: inferSiderbars(),
+    repo: "deniapps/vns",
+    editLinks: true,
     navbar: [
       {
         text: "Home",
