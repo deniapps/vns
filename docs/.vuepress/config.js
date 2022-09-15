@@ -10,6 +10,8 @@ export default defineUserConfig({
   title: "VuePress Next Starter",
   description: "VuePress Next 懒人包 - VNS",
   base: "/vns/", // if deployed to the root, then use "/"
+  repo: "deniapps/vns",
+  editLinks: true,
   head: [
     [
       "link",
@@ -52,11 +54,11 @@ export default defineUserConfig({
   plugins: [
     sitemapPlugin({
       // your options
-      hostname: "vns.com",
+      hostname: "deniapps.github.io/",
     }),
     googleAnalyticsPlugin({
       // options
-      id: "G-8R8LLBHPWX",
+      id: "G-P2TFX6P8ZL",
     }),
     searchPlugin({
       locales: {
