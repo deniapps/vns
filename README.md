@@ -20,7 +20,7 @@ VPS 就是VuePress, AGAIN! 准备构建文档，博客和其他静态网站？�
 - 根据文件夹内的文章自动生成边侧栏
 - 自动生成索引页
 - 部署脚本模版
-- 不一样的主页横幅（Utra Wide Hero）- 雕虫小技，见笑了！😜
+- 不一样的主页横幅（Ultrawide Hero）- 雕虫小技，见笑了！😜
 
 ## How to Install
 ```shell
@@ -34,4 +34,4 @@ npm install
 npm run dev
 ```
 
-
+更多HOWTOs，请到[这里](https://deniapps.github.io/vns/how-tos/)
