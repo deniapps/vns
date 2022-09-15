@@ -21,7 +21,7 @@ footer: MIT Licensed | Copyright © 2022-DENIAPPS
 
 <div class="features">
   <div class="feature" v-for="feat in $page.frontmatter.xfeatures">
-    <h2><a v-bind:href="feat.link">{{ feat.title }}</a></h2>
-    <p>{{ feat.details }} <a v-bind:href="feat.link">GO &#10132;</a></p>
+    <h2><a v-bind:href="$withBase(feat.link)">{{ feat.title }}</a></h2>
+    <p>{{ feat.details }} <a v-bind:href="$withBase(feat.link)">GO &#10132;</a></p>
   </div>
 </div>

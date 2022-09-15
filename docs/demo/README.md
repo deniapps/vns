@@ -21,7 +21,7 @@ VuePress没有提供文件夹内文件索性的边侧栏功能。但是我们可
 ## 自动生成目录下的边侧栏
 VNS 在全局配置文件(`docs/.vuepress/config.js`)里把sidebar设置为SidebarConfigObject，即在特定目录下使用相同的侧边栏，而这个侧边栏包含文件夹下的所有文件的索引，即“子数组”， 它是通过用utils函数`dcos/.vuepress/utils.js`自动生成。
 
-[试试看](/demo/inner-demo/demo1.html)
+[试试看](inner-demo/demo1.html)
 
 
 
