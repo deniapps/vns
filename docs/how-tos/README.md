@@ -57,6 +57,12 @@ $backUrl: "https://images.unsplash.com/photo-1547936785-c57315d64694?ixlib=rb-1.
 这两个文件在`docs/.vuepress/public`文件夹里。
 **推荐** [Adobe Express](https://express.adobe.com/sp/)来设计自己的Logo,然后用[PNG to ICO Converter](https://www.freeconvert.com/png-to-ico)生成favion.ico。
 
+## 如何添加页面
+- 在`docs`下创建一个目录，ex: new-page
+- 在目录下创建一个文件,命名为"README.md"
+- 然后，你就可以通过这个URL: `BASEURL/new-page`访问你刚刚创建的页面了。
+- 更多知识，请查看[指南](https://v2.vuepress.vuejs.org/zh/guide/page.html)
+
 ## 如何自动生成目录下的边侧栏
 
 - 首先定义你想要自动生成边侧栏的文件夹。打开`docs/.vuepress/sidebarMap.js`
@@ -74,5 +80,3 @@ export default sidebarMap;
 ## 如何部署
 
 请参考`deploy.sh`
-
--

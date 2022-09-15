@@ -8,9 +8,9 @@ xfeatures:
   - title: How-Tos
     details: 虽然是懒人包，但是还是需要简单设置一下。有问题？进来看看！
     link: /how-tos/
-  - title: 演示站
-    details: 想看看效果如何？到GitHub Page瞧瞧！
-    link: /demo/
+  - title: 站长日记
+    details: 到61DH瞧瞧站长写的东西！
+    link: "https://61dh.com/diary/"
   - title: Powered by VNS
     details: 有哪些网站在使用VuePress Next 懒人包?
     link: /powered-by-vns/
