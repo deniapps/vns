@@ -3,3 +3,5 @@ node_modules
 .cache
 .DS_Store
 dist
+# ingore all local files
+local*

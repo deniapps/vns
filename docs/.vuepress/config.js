@@ -9,7 +9,7 @@ export default defineUserConfig({
   lang: "en-US",
   title: "VuePress Next Starter",
   description: "VuePress Next 懒人包 - VNS",
-  base: "/",
+  base: "/vns/", // if deployed to the root, then use "/"
   head: [
     [
       "link",
