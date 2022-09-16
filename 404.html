@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="generator" content="VuePress 2.0.0-beta.51">
+    <style>
+      :root {
+        --c-bg: #fff;
+      }
+      html.dark {
+        --c-bg: #22272e;
+      }
+      html, body {
+        background-color: var(--c-bg);
+      }
+    </style>
+    <script>
+      const userMode = localStorage.getItem('vuepress-color-scheme');
+			const systemDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+			if (userMode === 'dark' || (userMode !== 'light' && systemDarkMode)) {
+				document.documentElement.classList.toggle('dark', true);
+			}
+    </script>
+    <link rel="icon" href="/favicon.ico"><title>VuePress Next Starter</title><meta name="description" content="VuePress Next 懒人包 - VNS">
+    <link rel="modulepreload" href="/vns/assets/app.1b285127.js"><link rel="modulepreload" href="/vns/assets/404.html.6c547fb6.js"><link rel="modulepreload" href="/vns/assets/404.html.d2dc3323.js"><link rel="prefetch" href="/vns/assets/index.html.bfa04d6c.js"><link rel="prefetch" href="/vns/assets/index.html.0dfdc83b.js"><link rel="prefetch" href="/vns/assets/index.html.ac537e87.js"><link rel="prefetch" href="/vns/assets/index.html.f41d735f.js"><link rel="prefetch" href="/vns/assets/index.html.e8f29964.js"><link rel="prefetch" href="/vns/assets/demo1.html.b49f3388.js"><link rel="prefetch" href="/vns/assets/demo2.html.0b6a2cb8.js"><link rel="prefetch" href="/vns/assets/demo3.html.df6e988c.js"><link rel="prefetch" href="/vns/assets/demo4.html.2209592b.js"><link rel="prefetch" href="/vns/assets/index.html.5bf2ad9b.js"><link rel="prefetch" href="/vns/assets/index.html.7baa7899.js"><link rel="prefetch" href="/vns/assets/index.html.599010ea.js"><link rel="prefetch" href="/vns/assets/index.html.ed91421b.js"><link rel="prefetch" href="/vns/assets/index.html.af633084.js"><link rel="prefetch" href="/vns/assets/demo1.html.7e61ccd7.js"><link rel="prefetch" href="/vns/assets/demo2.html.76e08131.js"><link rel="prefetch" href="/vns/assets/demo3.html.e927254d.js"><link rel="prefetch" href="/vns/assets/demo4.html.169b0e37.js">
+    <link rel="stylesheet" href="/vns/assets/style.6fbf5195.css">
+  </head>
+  <body>
+    <div id="app"><!--[--><div class="theme-container"><main class="page"><div class="theme-default-content"><h1>404</h1><blockquote>That&#39;s a Four-Oh-Four.</blockquote><a href="/vns/" class="">Take me home</a></div></main></div><!----><!--]--></div>
+    <script type="module" src="/vns/assets/app.1b285127.js" defer></script>
+  </body>
+</html>
