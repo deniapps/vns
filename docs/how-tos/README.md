@@ -74,7 +74,7 @@ export default sidebarMap;
 
 如上设置，`/demo/inner-demo`路径下的文件就相同的侧边栏，而这个侧边栏的子菜单是根据文件夹的文件动态生成的。(注意：在本地环境下，你需要重启vuepress才可以看到新加入的文件)
 
-[试试看看](/demo/inner-demo/)
+[试试看](/demo/inner-demo/README.md)
 
 
 ## 如何部署
